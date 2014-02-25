@@ -3,7 +3,10 @@ var MainRouter = Backbone.Router.extend({
 
 	routes: {
 		'about' : 'aboutPage',
-		'about/:name' : 'aboutPage'
+		'about/:name' : 'aboutPage',
+		'gimli' : 'gimliPage',
+		'legolas' : 'legolasPage',
+		'aragorn' : 'aragornPage'
 	},
 
 
@@ -17,5 +20,18 @@ var MainRouter = Backbone.Router.extend({
 	} else {
 		console.log('Boom! Youre at the About Page (bitches)!')
 	}
+	},
+
+	gimliPage: function(){
+		 new CharacterView();
+	},
+
+	legolasPage: function(){
+		 new LegolasView();
+	},
+
+	aragornPage: function(){
+		 new AragornView();
 	}
+
 })
